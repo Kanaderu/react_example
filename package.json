@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "React Example",
   "author": "David Fan",
-  "license": "",
+  "license": "MIT",
   "proxy": "https://ud-iot.ml/",
   "homepage": "https://ud-iot.ml/",
   "dependencies": {

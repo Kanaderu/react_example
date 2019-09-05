@@ -1,10 +1,11 @@
 {
-  "name": "mdb-react-admin-template",
+  "name": "React Example",
   "version": "1.0.0",
-  "description": "MDB - React Admin Dashboard Free",
-  "author": "MDBootstrap <support@mdbootstrap.com>",
-  "license": "MIT",
+  "description": "React Example",
+  "author": "David Fan",
+  "license": "",
   "proxy": "https://ud-iot.ml/",
+  "homepage": "https://ud-iot.ml/",
   "dependencies": {
     "google-map-react": "^1.0.6",
     "mdbreact": "^4.19.2",

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { MDBCol, MDBCard, MDBCardBody, MDBCardHeader, MDBRow } from 'mdbreact';
-import { Line, Doughnut, Radar } from 'react-chartjs-2';
+import { Line, /*Doughnut, Radar*/ } from 'react-chartjs-2';
 
 class ChartSection2 extends Component {
 

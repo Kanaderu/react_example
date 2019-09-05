@@ -3,6 +3,28 @@ import { MDBCol, MDBCard, MDBCardBody, MDBCardHeader, MDBRow, MDBListGroup, MDBL
 import { Bar, Pie } from 'react-chartjs-2';
 
 class ChartSection1 extends Component {
+
+    constructor(props){
+        super(props);
+        //this.GetMoviesFromApi=this.GetMoviesFromApi.bind(this);
+    }
+
+    //async function GetMoviesFromApi() {
+    //async GetMoviesFromApi() {
+    GetMoviesFromApi() {
+        try {
+            //let response = await fetch('https://facebook.github.io/react-native/movies.json');
+            //let responseJson = await response.json();
+            let response = fetch('https://facebook.github.io/react-native/movies.json');
+            let responseJson = response.json();
+	    console.log(responseJson.movies);
+	    //return responseJson.movies;
+        } catch(error) {
+            console.error(error);
+        }
+	return "";
+    } 
+
     render(){
         const dataBar = {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
@@ -61,6 +83,7 @@ class ChartSection1 extends Component {
         }
         return (
             <MDBRow className="mb-4">
+	    <this.GetMoviesFromApi />
                 <MDBCol md="8"className="mb-4">
                     <MDBCard className="mb-4">
                         <MDBCardBody>

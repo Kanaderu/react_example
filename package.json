@@ -4,6 +4,7 @@
   "description": "MDB - React Admin Dashboard Free",
   "author": "MDBootstrap <support@mdbootstrap.com>",
   "license": "MIT",
+  "proxy": "https://ud-iot.ml/",
   "dependencies": {
     "google-map-react": "^1.0.6",
     "mdbreact": "^4.19.2",

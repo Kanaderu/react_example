@@ -6,12 +6,14 @@ import TableSection from './sections/TableSection';
 import BreadcrumSection from './sections/BreadcrumSection';
 import ChartSection1 from './sections/ChartSection1';
 import ChartSection2 from './sections/ChartSection2';
+import ChartSection3 from './sections/ChartSection3';
 import MapSection from './sections/MapSection';
 import ModalSection from './sections/ModalSection';
 
 const DashboardPage =  () => {
   return (
     <React.Fragment>
+	  {/*
       <BreadcrumSection />
       <AdminCardSection1 />
       <ChartSection1 />
@@ -22,6 +24,8 @@ const DashboardPage =  () => {
           <ModalSection />
       </MDBRow>
       <AdminCardSection2 />
+      */}
+      <ChartSection3 />
     </React.Fragment>
   )
 }

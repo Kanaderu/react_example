@@ -91,7 +91,7 @@ class ChartSection2 extends Component {
             <MDBRow className="mb-12">
                 <MDBCol md="12" lg="8" className="mb-12">
                     <MDBCard className="mb-12">
-                    <MDBCardHeader>Line chart</MDBCardHeader>
+                    <MDBCardHeader>Temperature</MDBCardHeader>
                     <MDBCardBody>
 		        <Line data={dataLine} options={opts} />
                     </MDBCardBody>
@@ -99,7 +99,7 @@ class ChartSection2 extends Component {
                 </MDBCol>
                 <MDBCol md="12" lg="4" className="mb-4">
                     <MDBCard className="mb-12">
-                    <MDBCardHeader>Line chart</MDBCardHeader>
+                    <MDBCardHeader>Duplicate?</MDBCardHeader>
                     <MDBCardBody>
 		        <Line data={dataLine} options={opts} />
                     </MDBCardBody>

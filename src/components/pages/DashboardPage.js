@@ -9,6 +9,8 @@ import ChartSection2 from './sections/ChartSection2';
 import MapSection from './sections/MapSection';
 import ModalSection from './sections/ModalSection';
 
+import WeatherCard from './sections/WeatherCard';
+
 const DashboardPage =  () => {
   return (
     <React.Fragment>
@@ -19,6 +21,7 @@ const DashboardPage =  () => {
       <ChartSection2 />
       <MDBRow className="mb-4">
           <MapSection />
+          <WeatherCard />
           <ModalSection />
       </MDBRow>
       <AdminCardSection2 />

@@ -1,9 +1,11 @@
 {
-  "name": "mdb-react-admin-template",
+  "name": "react-example",
   "version": "1.0.0",
-  "description": "MDB - React Admin Dashboard Free",
-  "author": "MDBootstrap <support@mdbootstrap.com>",
+  "description": "React Example",
+  "author": "David Fan",
   "license": "MIT",
+  "homepage": "https://udsensors.tk/react/",
+  "proxy": "https://udsensors.tk",
   "dependencies": {
     "google-map-react": "^1.0.6",
     "mdbreact": "^4.19.2",

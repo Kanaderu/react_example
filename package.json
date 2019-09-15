@@ -4,8 +4,8 @@
   "description": "React Example",
   "author": "David Fan",
   "license": "MIT",
-  "proxy": "https://ud-iot.ml/",
-  "homepage": "https://ud-iot.ml/",
+  "homepage": "https://udsensors.tk/react/",
+  "proxy": "https://udsensors.tk",
   "dependencies": {
     "google-map-react": "^1.0.6",
     "mdbreact": "^4.19.2",

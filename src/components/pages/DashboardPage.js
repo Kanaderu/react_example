@@ -9,8 +9,10 @@ import ChartSection1 from './sections/ChartSection1';
 import ChartSection2 from './sections/ChartSection2';
 import MapSection from './sections/MapSection';
 import ModalSection from './sections/ModalSection';
-*/
 import ChartSection3 from './sections/ChartSection3';
+import WeatherCard from './sections/WeatherCard';
+*/
+import CityCard from './sections/CityCard';
 
 const DashboardPage =  () => {
   return (
@@ -26,8 +28,11 @@ const DashboardPage =  () => {
           <ModalSection />
       </MDBRow>
       <AdminCardSection2 />
-      */}
       <ChartSection3 />
+      <WeatherCard />
+      <ChartSection3 />
+      */}
+      <CityCard />
     </React.Fragment>
   )
 }

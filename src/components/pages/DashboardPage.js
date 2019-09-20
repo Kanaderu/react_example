@@ -1,6 +1,6 @@
 import React from 'react';
-/*
 import { MDBRow } from 'mdbreact';
+/*
 import AdminCardSection1 from './sections/AdminCardSection1';
 import AdminCardSection2 from './sections/AdminCardSection2';
 import TableSection from './sections/TableSection';
@@ -10,16 +10,18 @@ import ChartSection2 from './sections/ChartSection2';
 import MapSection from './sections/MapSection';
 import ModalSection from './sections/ModalSection';
 import ChartSection3 from './sections/ChartSection3';
+
+import CityCard from './sections/CityCard';
 import WeatherCard from './sections/WeatherCard';
 */
-import CityCard from './sections/CityCard';
+import DarkSkyCard from './sections/DarkSkyCard';
 
 import WeatherCard from './sections/WeatherCard';
 
 const DashboardPage =  () => {
   return (
     <React.Fragment>
-	  {/*
+      {/*
       <BreadcrumSection />
       <AdminCardSection1 />
       <ChartSection1 />
@@ -32,10 +34,15 @@ const DashboardPage =  () => {
       </MDBRow>
       <AdminCardSection2 />
       <ChartSection3 />
-      <WeatherCard />
       <ChartSection3 />
-      */}
       <CityCard />
+      */}
+      <MDBRow className="mb-4">
+      <WeatherCard />
+      </MDBRow>
+      <MDBRow className="mb-4">
+      <DarkSkyCard />
+      </MDBRow>
     </React.Fragment>
   )
 }

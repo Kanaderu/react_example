@@ -30,11 +30,8 @@ class CityCard extends Component {
                     cnt: data.cnt,
                     list: data.list
                 });
-                console.log(data);
-                console.log(this.state);
             })
             .catch((error) => {
-                console.log("Error!");
                 console.error(error);
             })
     }

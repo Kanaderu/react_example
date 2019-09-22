@@ -31,7 +31,6 @@ class DarkSkyCard extends Component {
     }
 
     render() {
-        console.log(this.props.data)
         const currentDay = new Date(this.props.data.currently.time * 1000).toDateString();
         const currentTime = new Date();
         const percentTime = 100*(currentTime.getHours()*60.0 + currentTime.getMinutes()) / 1440.0;
@@ -41,27 +40,27 @@ class DarkSkyCard extends Component {
                 <MDBCardImage className="img-fluid" src="dayton.jpeg" waves />
                 <MDBCardBody>
                     <MDBCardTitle className="display-1 card-title font-weight-bold">
-                    Dayton<br />
-                    { currentDay }
+                        Dayton<br />
+                        { currentDay }
                     </MDBCardTitle>
-                    <MDBCardText>
-                    <div className="d-flex justify-content-between">
-                    <p className="display-3 degree">{ this.props.data.currently.apparentTemperature } °F</p>
-                    { this.renderWeatherIcon(this.props.data.currently.icon) }
-                    </div>
-                    <div class="d-flex justify-content-between mb-4">
-                    <p><MDBIcon icon="tint" size="lg" className="cyan-text pr-2"/>{ this.props.data.currently.precipProbability }% Precipitation</p>
-                    <p><MDBIcon icon="leaf" size="lg" className="grey-text pr-2"/>{ this.props.data.currently.windSpeed } mi/h Winds</p>
-                    <p><MDBIcon icon="water" size="lg" className="blue-text pr-2" />{ this.props.data.currently.humidity * 100.0}% Humidity</p>
-                    </div>
-                    <MDBProgress material value={percentTime} height="10px" color="success" />
-                    <ul class="list-unstyled d-flex justify-content-between font-small text-muted mb-4">
-                    <li class="pl-4">8AM</li>
-                    <li>11AM</li>
-                    <li>2PM</li>
-                    <li>5PM</li>
-                    <li class="pr-4">8PM</li>
-                    </ul>
+                    <MDBCardText tag="div">
+                        <div className="d-flex justify-content-between">
+                        <div className="display-3 degree">{ this.props.data.currently.apparentTemperature } °F</div>
+                        { this.renderWeatherIcon(this.props.data.currently.icon) }
+                        </div>
+                        <div className="d-flex justify-content-between mb-4">
+                        <div><MDBIcon icon="tint" size="lg" className="cyan-text pr-2"/>{ this.props.data.currently.precipProbability }% Precipitation</div>
+                        <div><MDBIcon icon="leaf" size="lg" className="grey-text pr-2"/>{ this.props.data.currently.windSpeed } mi/h Winds</div>
+                        <div><MDBIcon icon="water" size="lg" className="blue-text pr-2" />{ this.props.data.currently.humidity * 100.0}% Humidity</div>
+                        </div>
+                        <MDBProgress material value={percentTime} height="10px" color="success" />
+                        <ul className="list-unstyled d-flex justify-content-between font-small text-muted mb-4">
+                            <li className="pl-4">3AM</li>
+                            <li>7AM</li>
+                            <li>11PM</li>
+                            <li>3PM</li>
+                            <li className="pr-4">7PM</li>
+                        </ul>
                     </MDBCardText>
                 </MDBCardBody>
             </MDBCard>

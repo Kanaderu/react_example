@@ -6,14 +6,7 @@ class ChartSection6 extends Component {
 
     render(){
 
-        var weekday = new Array();
-        weekday[0] = "Sun";
-        weekday[1] = "Mon";
-        weekday[2] = "Tue";
-        weekday[3] = "Wed";
-        weekday[4] = "Thu";
-        weekday[5] = "Fri";
-        weekday[6] = "Sat";
+        const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
         const dataLine = {
             labels: this.props.data.daily.data.map((data) => {

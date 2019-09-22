@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MDBCollapse, MDBIcon, MDBProgress, MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol } from 'mdbreact';
+import { /*MDBCollapse,*/ MDBIcon, MDBProgress, /*MDBBtn,*/ MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol } from 'mdbreact';
 
 class DarkSkyCard extends Component {
 
@@ -17,7 +17,8 @@ class DarkSkyCard extends Component {
 
     fetchCityData(){
         //fetch('http://api.openweathermap.org/data/2.5/forecast?id=4509884&APPID=4687e81acdb537f9488ce1bacea4cab3')
-        fetch('http://localhost:3000/dayton_darksky.json')
+        //fetch('http://localhost:3000/dayton_darksky.json')
+        fetch('https://udsensors.tk/ws/darksky/')
             .then(response => response.json())
             .then((data) => {
                 this.setState({
@@ -31,8 +32,6 @@ class DarkSkyCard extends Component {
                     minutely: data.minutely,
                     flags: data.flags,
                 });
-                console.log(data);
-                console.log(this.state);
             })
             .catch((error) => {
                 console.log("Error!");
@@ -81,7 +80,7 @@ class DarkSkyCard extends Component {
         const percentTime = 100*(currentTime.getHours()*60.0 + currentTime.getMinutes()) / 1440.0;
         return (
         <MDBCol>
-            <MDBCard style={{ width: "30rem" }}>
+            <MDBCard style={{ width: "28rem" }}>
                 <MDBCardImage className="img-fluid" src="dayton.jpeg" waves />
                 <MDBCardBody>
                     {/*<h4 className="card-title font-weight-bold">{ this.state.city_info.name }</h4>*/}

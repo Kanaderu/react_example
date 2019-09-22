@@ -16,7 +16,11 @@ import WeatherCard from './sections/WeatherCard';
 */
 import DarkSkyCard from './sections/DarkSkyCard';
 
-import WeatherCard from './sections/WeatherCard';
+import ChartSection4 from './sections/ChartSection4';
+import ChartSection5 from './sections/ChartSection5';
+import ChartSection6 from './sections/ChartSection6';
+
+
 
 const DashboardPage =  () => {
   return (
@@ -36,13 +40,19 @@ const DashboardPage =  () => {
       <ChartSection3 />
       <ChartSection3 />
       <CityCard />
-      */}
-      <MDBRow className="mb-4">
       <WeatherCard />
-      </MDBRow>
+      */}
       <MDBRow className="mb-4">
       <DarkSkyCard />
       </MDBRow>
+      {/*
+      <MDBRow className="mb-4">
+      <ChartSection5 />
+      </MDBRow>
+      */}
+      <ChartSection4 />
+      <ChartSection5 />
+      <ChartSection6 />
     </React.Fragment>
   )
 }

@@ -4,21 +4,6 @@ import { Line, /*Doughnut, Radar*/ } from 'react-chartjs-2';
 
 class ChartSection6 extends Component {
 
-    state = {
-        daily: {
-            data: [],
-        },
-    }
-
-    componentDidMount() {
-        fetch('https://udsensors.tk/ws/darksky/')
-        .then(res => res.json())
-        .then((data) => {
-            this.setState({ daily: data.daily })
-        })
-        .catch(console.log)
-    }
-
     render(){
 
         var weekday = new Array();
@@ -31,7 +16,7 @@ class ChartSection6 extends Component {
         weekday[6] = "Sat";
 
         const dataLine = {
-            labels: this.state.daily.data.map((data) => {
+            labels: this.props.data.daily.data.map((data) => {
                 const date = new Date(data.time*1000);
                 return weekday[date.getDay()];
             }),
@@ -56,7 +41,7 @@ class ChartSection6 extends Component {
                 pointHoverBorderWidth: 2,
                 pointRadius: 1,
                 pointHitRadius: 10,
-                data: this.state.daily.data.map((data) => (
+                data: this.props.data.daily.data.map((data) => (
                     data.precipProbability * 100
                 )),
               },
@@ -79,7 +64,7 @@ class ChartSection6 extends Component {
                 pointHoverBorderWidth: 2,
                 pointRadius: 1,
                 pointHitRadius: 10,
-                data: this.state.daily.data.map((data) => (
+                data: this.props.data.daily.data.map((data) => (
                     data.cloudCover * 100
                 )),
               },
@@ -102,7 +87,7 @@ class ChartSection6 extends Component {
                 pointHoverBorderWidth: 2,
                 pointRadius: 1,
                 pointHitRadius: 10,
-                data: this.state.daily.data.map((data) => (
+                data: this.props.data.daily.data.map((data) => (
                     data.humidity * 100
                 )),
               },

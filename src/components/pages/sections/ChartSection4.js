@@ -4,24 +4,9 @@ import { Line, /*Doughnut, Radar*/ } from 'react-chartjs-2';
 
 class ChartSection4 extends Component {
 
-    state = {
-        hourly: {
-            data: [],
-        },
-    }
-
-    componentDidMount() {
-        fetch('https://udsensors.tk/ws/darksky/')
-        .then(res => res.json())
-        .then((data) => {
-            this.setState({ hourly: data.hourly })
-        })
-        .catch(console.log)
-    }
-
     render(){
         const dataLine = {
-            labels: this.state.hourly.data.map((data) => {
+            labels: this.props.data.hourly.data.map((data) => {
                 const date = new Date(data.time*1000);
                 return date.getHours();
             }),
@@ -46,7 +31,7 @@ class ChartSection4 extends Component {
                 pointHoverBorderWidth: 2,
                 pointRadius: 1,
                 pointHitRadius: 10,
-                data: this.state.hourly.data.map((data) => (
+                data: this.props.data.hourly.data.map((data) => (
                     data.temperature
                 )),
               },
@@ -69,7 +54,7 @@ class ChartSection4 extends Component {
                 pointHoverBorderWidth: 2,
                 pointRadius: 1,
                 pointHitRadius: 10,
-                data: this.state.hourly.data.map((data) => (
+                data: this.props.data.hourly.data.map((data) => (
                     data.apparentTemperature
                 )),
               }
